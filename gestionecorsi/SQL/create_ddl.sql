@@ -2,8 +2,8 @@
 
 create table admin(
 id_admin int,
-username varchar2(500) not null,
-password varchar2(30) not null,
+username varchar2(30) not null,
+password varchar2(500) not null,
 constraint p_admin primary key(id_admin));
 
 -- gestione corsi, corsisti
