@@ -15,3 +15,14 @@ insert into corsista values(corsista_seq.nextval, 'Ciro', 'Rossi', 1);
 insert into corsista values(corsista_seq.nextval, 'Aldo', 'Blu', 0);
 insert into corsista values(corsista_seq.nextval, 'Gloria', 'Rossi', 0);
 insert into corsista values(corsista_seq.nextval, 'Gino', 'Blu', 0);
+
+insert into corso_corsista values(1,1);
+insert into corso_corsista values(1,2);
+insert into corso_corsista values(1,3);
+insert into corso_corsista values(2,1);
+insert into corso_corsista values(2,4);
+insert into corso_corsista values(2,5);
+insert into corso_corsista values(3,4);
+insert into corso_corsista values(3,3);
+insert into corso_corsista values(3,6);
+
