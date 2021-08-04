@@ -1,9 +1,9 @@
 -- admin
-insert into admin values(1, 'admin', 'Pass01$');
+insert into admin values(1, 'admin', 'b0Er93%d£xW4a1plVmz%2Pa3Lx$#2Er93%d£xW4a1plVmz%2Pa3Lx$#43Er93%d£xW4a1plVmz%2Pa3Lx$#bEr93%d£xW4a1plVmz%2Pa3Lx$#abEr93%d£xW4a1plVmz%2Pa3Lx$#fEr93%d£xW4a1plVmz%2Pa3Lx$#b3Er93%d£xW4a1plVmz%2Pa3Lx$#96Er93%d£xW4a1plVmz%2Pa3Lx$#6dEr93%d£xW4a1plVmz%2Pa3Lx$#e2Er93%d£xW4a1plVmz%2Pa3Lx$#99Er93%d£xW4a1plVmz%2Pa3Lx$#89Er93%d£xW4a1plVmz%2Pa3Lx$#3Er93%d£xW4a1plVmz%2Pa3Lx$#76Er93%d£xW4a1plVmz%2Pa3Lx$#2Er93%d£xW4a1plVmz%2Pa3Lx$#9Er93%d£xW4a1plVmz%2Pa3Lx$#');
 
 -- gestionale
-insert into docente values(1, 'Mario', 'Rossi');
-insert into docente values(2, 'Sergio', 'Verdi');
+insert into docente values(1, 'Mario', 'Rossi', '/cv/mr.pdf');
+insert into docente values(2, 'Sergio', 'Verdi', '/cv/sv.pdf');
 
 insert into corso values(1, 'Algebra', '12-GEN-2021', '12-MAR-2021', 1000, 'Interessante, impegnativo', 'Aula A', 1);
 insert into corso values(2, 'Trigonometria', '12-MAR-2021', '12-APR-2021', 500, 'Difficile, poco strutturato', 'Aula B', 2);

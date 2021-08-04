@@ -2,7 +2,7 @@
 
 create table admin(
 id_admin int,
-username varchar2(30) not null,
+username varchar2(500) not null,
 password varchar2(30) not null,
 constraint p_admin primary key(id_admin));
 
@@ -12,6 +12,7 @@ create table docente(
 id_docente int,
 nome_docente varchar2(30) not null,
 cognome_docente varchar2(30) not null,
+cv_docente varchar2(50) not null,
 constraint p_docente primary key(id_docente));
 
 create table corso(
