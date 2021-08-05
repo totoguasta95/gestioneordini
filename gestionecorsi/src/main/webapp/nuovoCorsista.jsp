@@ -48,98 +48,8 @@ div.col-md-7 {
 				</div>
 				<div class="col-md-7 control-label" id="infoCognome"></div>
 			</div>
-
-			<!-- Nome Corso ---------------------------------------------------->
-			<div class="form-group">
-				<label class="col-md-1 control-label">Nome corso</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon"> <i
-							class="glyphicon glyphicon-book"></i></span> <input name="nomeCorso"
-							id="nomeCorso" placeholder="Nome corso" class="form-control"
-							style="resize: none" />
-					</div>
-				</div>
-				<div class="col-md-7 control-label" id="infoNomeCorso"></div>
-			</div>
-
-
-			<!-- Data inizio  ------------------------------------------------------>
-			<div class="form-group">
-				<label class="col-md-1 control-label">Data inizio</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group date" id="dp">
-						<span class="input-group-addon"> <i
-							class="glyphicon glyphicon-calendar"></i></span> <input type="text"
-							name="dataInizio" id="dataInizio" placeholder="GG/MM/AAAA"
-							class="form-control">
-					</div>
-				</div>
-				<div class="col-md-7 control-label" id="infoDataInizio"></div>
-			</div>
-
-			<script type="text/javascript">
-				$(function() {
-					$('#dp').datepicker({
-						format : 'dd/mm/yyyy',
-						autoclose : true,
-						startDate : '01/01/2021',
-						endDate : new Date()
-					}).on(
-							'changeDate',
-							function(e) {
-								$('#userForm').bootstrapValidator(
-										'revalidateField', 'dataInizio');
-							});
-				}); 
-			</script>
-
-			<!-- Data Fine  ------------------------------------------------------>
-			<div class="form-group">
-				<label class="col-md-1 control-label">Data fine</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group date" id="dp1">
-						<span class="input-group-addon"> <i
-							class="glyphicon glyphicon-calendar"></i></span> <input type="text"
-							name="dataFine" id="dataFine" placeholder="GG/MM/AAAA"
-							class="form-control">
-					</div>
-				</div>
-				<div class="col-md-7 control-label" id="infoDataFine"></div>
-			</div>
-
-			<script type="text/javascript">
-				$(function() {
-					$('#dp1').datepicker({
-						format : 'dd/mm/yyyy',
-						autoclose : true,
-						startDate : '01/01/2021',
-						endDate : new Date()
-					}).on(
-							'changeDate',
-							function(e) {
-								$('#userForm').bootstrapValidator(
-										'revalidateField', 'dataFine');
-							});
-				});
-			</script>
-			<!-- Commenti ----------------------------------------------------->
-			<div class="form-group">
-				<label class="col-md-1 control-label">Commenti</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon"> <i
-							class="glyphicon glyphicon-pencil"></i></span>
-						<textarea name="commenti" id="commenti" placeholder="Commenti"
-							class="form-control" maxlength="10" cols="40" rows="3"
-							style="resize: none" maxlength="200"></textarea>
-					</div>
-				</div>
-
-				<div class="col-md-7 control-label" id="infoCommenti"></div>
-			</div>
-
-			<!-- Precedenti formativi ----------------------------------------------------->
+			
+						<!-- Precedenti formativi ----------------------------------------------------->
 			<div class="form-group">
 				<label class="col-md-1 control-label">Precedenti formativi</label>
 				<div class="col-md-4 inputGroupContainer">
@@ -155,42 +65,29 @@ div.col-md-7 {
 					</div>
 
 
-					<div class="col-md-7 control-label" id="infoPrecedentiFormativi"></div>
+					<div class="col-md-7 control-label" id="precedentiFormativi"></div>
 				</div>
 			</div>
 
-			<!-- Aula corso -------------------------------------------------------->
+			<!-- Nome Corso ---------------------------------------------------->
 			<div class="form-group">
-				<label class="col-md-1 control-label">Aula corso</label>
+				<label class="col-md-1 control-label">Nome corso</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
-							class="glyphicon glyphicon-modal-window"></i></span> <input type="text"
-							name="aulaCorso" id="aulaCorso" placeholder="Aula corso"
-							class="form-control" maxlength="3">
+							class="glyphicon glyphicon-book"></i></span> <input name="nomeCorso"
+							id="nomeCorso" placeholder="Nome corso" class="form-control"
+							style="resize: none" />
 					</div>
 				</div>
-				<div class="col-md-7 control-label" id="infoAulaCorso"></div>
+				<div class="col-md-7 control-label" id="infoNomeCorso"></div>
 			</div>
-			<!-- Docente --------------------------------------------------------->
-			<div class="form-group">
-				<label class="col-md-1 control-label">Docente</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon"> <i
-							class="glyphicon glyphicon-user"></i></span> <input type="text"
-							name="docente" id="docente" placeholder="Docente"
-							class="form-control">
-					</div>
-				</div>
-				<div class="col-md-7 control-label" id="infoDocente"></div>
-			</div>
-
+			
 			<!-- Submit ------------------------------------------------------->
 			<div class="row">
 				<div class="col-md-4 col-md-offset-1">
 					<button type="submit" class="btn btn-primary">
-						Registrati&nbsp;<span class="glyphicon glyphicon-send"></span>
+						Inserisci&nbsp;<span class="glyphicon glyphicon-send"></span>
 					</button>
 				</div>
 			</div>

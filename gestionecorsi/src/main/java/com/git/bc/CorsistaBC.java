@@ -18,13 +18,16 @@ public class CorsistaBC {
 		cig = CorsistaIdGenerator.getInstance();
 	}
 
-	public void create(Corsista corsista) throws DAOException, ClassNotFoundException, IOException {
+	public long create(Corsista corsista) throws DAOException, ClassNotFoundException, IOException {
+		long id = 0;
 		try {
-			corsista.setIdCorsista(cig.getNextId());
+			id = cig.getNextId();
+			corsista.setIdCorsista(id);
 			CorsistaDAO.getFactory().create(conn, corsista);
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
 		}
+		return id;
 	}
 
 	public Corsista getById(long id) throws DAOException {

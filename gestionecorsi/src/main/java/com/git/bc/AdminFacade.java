@@ -30,8 +30,8 @@ public class AdminFacade {
 	}
 	
 	// corsista
-		public void create(Corsista corsista) throws DAOException, ClassNotFoundException, IOException {
-			corsistaBC.create(corsista);
+		public long create(Corsista corsista) throws DAOException, ClassNotFoundException, IOException {
+			return corsistaBC.create(corsista);
 		}
 		
 		public Corsista getById(long id) throws DAOException {
