@@ -9,7 +9,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
 <%@include file="head.jsp"%>
 <title>Corsisti</title>
@@ -53,18 +53,27 @@
 		</div>
 		<br>
 		<div class="panel panel-info">
-			<div class="panel-heading">
-			</div>
-			<div class="panel-body">
-			</div>
+			<div class="panel-heading"></div>
+			<div class="panel-body"></div>
+		</div>
+
+		<div class="btn-group">
+			<a class="btn btn-primary btn-lg" href="nuovoCorsista.jsp" role="button">
+				<span class="glyphicon glyphicon-pencil"></span> Inserisci
+			</a>
+			<a class="btn btn-info btn-lg" href="nuovoCorsista.jsp" role="button">
+				<span class="glyphicon glyphicon-th-list"></span> Statistiche
+			</a>
+			<a class="btn btn-danger btn-lg" href="elimina.jsp" role="button">
+				<span class="glyphicon glyphicon-trash"> </span> Elimina corsi
+				</a>
 		</div>
 
 	</div>
-	      <form>
-                <button type="submit" class="btn btn-danger btn-xs">
-                    <span class="glyphicon glyphicon-trash">Inserisci</span>
-                </button>
-            </form>
+
+
+
+
 	<footer>
 		<%@include file="footer.html"%>
 	</footer>

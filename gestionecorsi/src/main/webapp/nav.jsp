@@ -10,9 +10,6 @@
 			 
 
 			<a class="navbar-brand" href="#">Home</a>
-			<a class="navbar-brand" href="corsisti.jsp">Corsisti</a>
-			<a class="navbar-brand" href="nuovoCorsista.jsp">Nuovo Corsista</a>
-			<a class="navbar-brand" href="statistiche.jsp">Statistiche</a>
 		</div>
 		
 		<div class="collapse navbar-collapse" id="menu">
@@ -33,6 +30,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="corsisti.jsp">Corsisti</a></li>
 			<li><a href="nuovoCorsista.jsp">Nuovo corsista</a></li>
+			<li><a href="statistiche.jsp">Statistiche</a></li>
 		</ul>
 					
 		<ul class="nav navbar-nav navbar-right">
