@@ -10,7 +10,7 @@
 <%@include file="head.jsp"%>
 <!-- Latest compiled and minified CSS -->
 <meta charset="UTF-8">
-<title>Errore</title>
+<title>Errore</title> 
 </head>
 <body>
 	<jsp:include page="nav.jsp" />

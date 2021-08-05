@@ -12,7 +12,7 @@ if (admin != null) {
 <%@include file="head.jsp"%>
 <title>logout</title>
 </head>
-<body>
+<body> 
 	<jsp:include page="nav.jsp" />
 	<div class="container">
 		<div class="page-header">

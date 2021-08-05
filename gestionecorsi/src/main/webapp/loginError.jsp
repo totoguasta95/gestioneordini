@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="page-header">
 			<h3>Accesso negato</h3>
-		</div>
+		</div> 
 
 		<div class="panel panel-danger">
 			<div class="panel-heading">

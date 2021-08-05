@@ -1,7 +1,7 @@
 <%@page import="java.util.Enumeration"%>
 <%
-String admin = (String) session.getAttribute("admin");
-if (admin != null) {
+//String admin = (String) session.getAttribute("admin");
+//if (admin != null) {
 %>
 <%@page import="com.git.bc.model.Corsista"%>
 <%@page import="com.git.bc.model.Docente"%>
@@ -9,7 +9,7 @@ if (admin != null) {
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <%@include file="head.jsp"%>
 <title>Corsisti</title>
@@ -71,6 +71,6 @@ if (admin != null) {
 </body>
 </html>
 <%
-} else
-	response.sendRedirect("login.jsp");
+//} else
+//	response.sendRedirect("login.jsp");
 %>

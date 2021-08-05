@@ -22,7 +22,7 @@
 			</div>
 			<div class="panel-body">
 				<p>Siamo spiacenti, per malfunzionamento contattare
-					amministratore:</p>
+					amministratore:</p> 
 				<p>
 					<a href="mailto:admin@site.com">admin@site.com</a>
 				</p>

@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span> 
 				<span class="icon-bar"></span>
 			</button>
-			
+			 
 
 			<a class="navbar-brand" href="#">Home</a>
 			<a class="navbar-brand" href="corsisti.jsp">Corsisti</a>

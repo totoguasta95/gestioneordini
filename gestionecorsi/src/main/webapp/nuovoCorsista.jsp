@@ -91,7 +91,7 @@ div.col-md-7 {
 								$('#userForm').bootstrapValidator(
 										'revalidateField', 'dataInizio');
 							});
-				});
+				}); 
 			</script>
 
 			<!-- Data Fine  ------------------------------------------------------>

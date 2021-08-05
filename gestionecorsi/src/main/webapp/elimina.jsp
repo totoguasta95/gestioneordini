@@ -11,7 +11,7 @@ if (admin != null) {
 
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 <%@include file="head.jsp"%>
 <title>Elimina</title>
 <link rel="stylesheet"

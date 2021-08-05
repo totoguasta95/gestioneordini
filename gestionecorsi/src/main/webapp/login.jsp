@@ -1,6 +1,6 @@
 <%
-	//String admin = (String) session.getAttribute("admin");
-	//if(admin == null) {
+	String admin = (String) session.getAttribute("admin");
+	if(admin == null) {
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 <title>Login</title>
 </head>
 <body>
-<jsp:include page="nav.jsp"/>
+<jsp:include page="nav.jsp"/> 
 <div class="container">
 	<div class="page-header">
 		<h3 style="text-align: center;">Inserire i dati per effettuare il login</h3>
@@ -76,6 +76,6 @@
 </body>
 </html>
 <%
-//	} else
-//		response.sendRedirect("corsisti.jsp");
+	} else
+		response.sendRedirect("corsisti.jsp");
 %>
