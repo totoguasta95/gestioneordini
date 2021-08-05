@@ -59,7 +59,7 @@
 					<div class="alert alert-danger" style="font-weight: bold; text-align: center;">
 						<%= msg %>
 					</div>
-				</div>
+				</div> 
 				<% } %>
 				
 				<div class="row" style="text-align: center; margin-top: 30px; margin-bottom: 50px;">

@@ -18,7 +18,7 @@
 		<div class="panel panel-danger">
 			<div class="panel-heading">
 				<h3>Numero di tentativi esauriti!</h3>
-			</div>
+			</div> 
 			<div class="panel-body">
 				<p>Siamo spiacenti, per recuperare le credenziali contattare
 					l'amministratore:</p>
