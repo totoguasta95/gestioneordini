@@ -44,3 +44,4 @@ constraint f_idCorsista foreign key(id_corsista) references corsista(id_corsista
 -- gestione sequenze
 
 create sequence corsista_seq;
+create sequence corso_seq;

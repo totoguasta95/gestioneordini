@@ -7,3 +7,4 @@ drop table admin cascade constraints;
 
 -- drop sequence
 drop sequence corsista_seq;
+drop sequence corso_seq;
