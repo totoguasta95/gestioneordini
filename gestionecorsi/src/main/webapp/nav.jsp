@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -9,22 +9,25 @@
 			</button>
 			
 
-			<a class="navbar-brand" href="index.jsp">Login</a>
+			<a class="navbar-brand" href="#">Home</a>
+			<a class="navbar-brand" href="corsisti.jsp">Corsisti</a>
+			<a class="navbar-brand" href="nuovoCorsista.jsp">Nuovo Corsista</a>
+			<a class="navbar-brand" href="statistiche.jsp">Statistiche</a>
 		</div>
 		
 		<div class="collapse navbar-collapse" id="menu">
 		<%
-			String user = (String)session.getAttribute("username");
+			String user = (String)session.getAttribute("admin");
 			if(user == null){
 		%>	
 		<ul class="nav navbar-nav navbar-right">
 			<li>
-				<a href="registra.jsp">
-				<span class="glyphicon glyphicon-user"></span> Sign Up</a>
+				<a href="login.jsp">
+				<span class="glyphicon glyphicon-user"></span> Sign in</a>
 			</li>
 			<li>
 				<a href="login.jsp">
-				<span class="glyphicon glyphicon-log-in"></span> Login</a>
+				<span class="glyphicon glyphicon-log-in"></span> Logout</a>
 			</li>
 		</ul>
 		<% 
