@@ -1,10 +1,7 @@
-package com.git.architecture.dbaccess;
+package com.git.architecture.dao;
 
 
 import java.sql.Connection;
-
-import com.git.architecture.dao.DAOException;
-import com.git.architecture.dao.GenericDAO;
 
 public abstract class DAOAdapter<T> implements GenericDAO<T>{
 

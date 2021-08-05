@@ -9,8 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import com.git.architecture.dao.DAOException;
+import com.git.architecture.dao.DocenteDAO;
 import com.git.architecture.dbaccess.DBAccess;
-import com.git.architecture.dbaccess.DocenteDAO;
 import com.git.bc.model.Docente;
 
 class DocenteDAOTest {

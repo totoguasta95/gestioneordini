@@ -1,12 +1,10 @@
-package com.git.architecture.dbaccess;
+package com.git.architecture.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.git.architecture.dao.DAOConstants;
-import com.git.architecture.dao.DAOException;
 import com.git.bc.model.Docente;
 
 public class DocenteDAO extends DAOAdapter<Docente> implements DAOConstants {
