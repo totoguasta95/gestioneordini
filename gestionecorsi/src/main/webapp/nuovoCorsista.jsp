@@ -19,7 +19,7 @@ div.col-md-7 {
 			<h3>Inserire i dati per la registrazione del nuovo corsista</h3>
 		</div>
 
-		<form action="/<%=application.getServletContextName()%>/salvadati"
+		<form action="/<%=application.getServletContextName()%>/salvacorsista"
 			method="post" id="userForm" class="form-horizontal">
 
 			<!-- Nome --------------------------------------------------------->
@@ -48,20 +48,20 @@ div.col-md-7 {
 				</div>
 				<div class="col-md-7 control-label" id="infoCognome"></div>
 			</div>
-			
-						<!-- Precedenti formativi ----------------------------------------------------->
+
+			<!-- Precedenti formativi ----------------------------------------------------->
 			<div class="form-group">
 				<label class="col-md-1 control-label">Precedenti formativi</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="gridRadios"
-							id="si" value="si"> <label class="form-check-label"
-							for="gridRadios1"> Si </label>
+							id="bool" value="si"> <label class="form-check-label"
+							for="gridRadios1">Si</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="gridRadios"
-							id="no" value="no"> <label class="form-check-label"
-							for="gridRadios1"> No </label>
+							id="bool" value="no"> <label class="form-check-label"
+							for="gridRadios1">No</label>
 					</div>
 
 
@@ -82,7 +82,7 @@ div.col-md-7 {
 				</div>
 				<div class="col-md-7 control-label" id="infoNomeCorso"></div>
 			</div>
-			
+
 			<!-- Submit ------------------------------------------------------->
 			<div class="row">
 				<div class="col-md-4 col-md-offset-1">

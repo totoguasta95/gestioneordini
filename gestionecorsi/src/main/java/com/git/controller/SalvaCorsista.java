@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.git.bc.AdminFacade;
 import com.git.bc.model.Corsista;
@@ -22,7 +21,6 @@ public class SalvaCorsista extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
 		Corsista corsista = new Corsista();
 		long id = 0;
 		Corso corso	= new Corso();
@@ -34,17 +32,18 @@ public class SalvaCorsista extends HttpServlet {
 			corsista.setNomeCorsista(request.getParameter("nome"));
 			corsista.setCognomeCorsista(request.getParameter("cognome"));
 			corsista.setPrecedentiFormativi(
-					request.getParameter("precedentiFormativi").equals("si")?true:false);
+					request.getParameter("gridRadios").equals("si")?true:false);
 			
 			id = af.create(corsista);
+			if(id > 0) {
+				corso.setIdCorso(Long.parseLong(request.getParameter("nomeCorso")));
+				cc.setIdCorso(corso.getIdCorso());
+				cc.setIdCorsista(id);
 			
-			corso.setIdCorso(Long.parseLong(request.getParameter("id")));
-			cc.setIdCorso(corso.getIdCorso());
-			cc.setIdCorsista(id);
-			
-			af.create(cc);
-			
-			response.sendRedirect("corsisti.jsp");
+				af.create(cc);
+				response.sendRedirect("corsisti.jsp");
+			} else
+				response.sendRedirect("error.jsp");
 			
 		} catch (SQLException | ClassNotFoundException exc) {
 			exc.printStackTrace();
