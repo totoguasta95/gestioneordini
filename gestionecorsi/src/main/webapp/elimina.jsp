@@ -47,6 +47,7 @@ if (admin != null) {
 						<td>cognome</td>
 						<td>nomeCorso</td>
 						<td>dataInizio</td>
+						<td>dataFine</td>
 						<td>commenti</td>
 						<td>precedentiFormativi</td>
 						<td>aulacorso</td>
