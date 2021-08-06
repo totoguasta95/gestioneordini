@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
 				data-target="#menu">
@@ -9,7 +9,7 @@
 			</button>
 			 
 
-			<a class="navbar-brand" href="#">Home</a>
+			<a class="navbar-brand" href="corsisti.jsp">Home</a>
 		</div>
 		
 		<div class="collapse navbar-collapse" id="menu">
@@ -28,7 +28,6 @@
 			} else {
 		%>
 		<ul class="nav navbar-nav">
-			<li><a href="corsisti.jsp">Corsisti</a></li>
 			<li><a href="nuovoCorsista.jsp">Nuovo corsista</a></li>
 			<li><a href="statistiche.jsp">Statistiche</a></li>
 		</ul>
