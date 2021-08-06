@@ -14,12 +14,14 @@ import com.git.architecture.dao.CorsoDAO;
 import com.git.architecture.dao.DAOException;
 import com.git.architecture.dbaccess.DBAccess;
 import com.git.bc.CorsoIdGenerator;
+import com.git.bc.model.Corsista;
 import com.git.bc.model.Corso;
 
 class CorsoDAOTest {
 	
 	private static Corso c;
 	private static Corso[] corsi;
+	private static Corsista[] corsisti;
 	private static Connection conn;
 	private static long id;
 
@@ -30,7 +32,7 @@ class CorsoDAOTest {
 		System.out.println(id);
 		conn = DBAccess.getConnection();
 		c = new Corso();
-		c.setIdCorso(id);
+		c.setIdCorso(6);
 		c.setNomeCorso("Lettere Antiche");
 		c.setDataInizioCorso(new GregorianCalendar(2021,1,12).getTime());
 		c.setDataFineCorso(new GregorianCalendar(2021,4,17).getTime());
@@ -55,8 +57,39 @@ class CorsoDAOTest {
 		try {
 			corsi = CorsoDAO.getFactory().getAll(conn);
 			assertNotNull(corsi);
+			System.out.println("Tutti i corsi:");
 			for (int i = 0; i < corsi.length; i++) {
 				System.out.println(corsi[i].toString());
+			}
+		} catch (DAOException exc) {
+			exc.printStackTrace();
+			fail(exc.getMessage());
+		}
+	}
+	
+	@Test
+	void testGetAllFree() {
+		try {
+			corsi = CorsoDAO.getFactory().getAllFree(conn);
+			assertNotNull(corsi);
+			System.out.println("Corsi con posti liberi:");
+			for (int i = 0; i < corsi.length; i++) {
+				System.out.println(corsi[i].toString());
+			}
+		} catch (DAOException exc) {
+			exc.printStackTrace();
+			fail(exc.getMessage());
+		}
+	}
+	
+	@Test
+	void testGetCorsisti() {
+		try {
+			corsisti = CorsoDAO.getFactory().getCorsisti(conn,5);
+			assertNotNull(corsi);
+			System.out.println("Tutti i corsisti del corso 5:");
+			for (int i = 0; i < corsisti.length; i++) {
+				System.out.println(corsisti[i].toString());
 			}
 		} catch (DAOException exc) {
 			exc.printStackTrace();
@@ -68,6 +101,7 @@ class CorsoDAOTest {
 	static void tearDownAfterClass() throws Exception {
 		try {
 			corsi = null;
+			corsisti = null;
 			CorsoDAO.getFactory().delete(conn, c);
 			System.out.println("Corso Eliminato");
 			c = null;

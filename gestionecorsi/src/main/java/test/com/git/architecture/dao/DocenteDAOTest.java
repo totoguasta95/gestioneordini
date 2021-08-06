@@ -8,11 +8,11 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import com.git.architecture.dao.CorsistaDAO;
+
 import com.git.architecture.dao.DAOException;
 import com.git.architecture.dao.DocenteDAO;
 import com.git.architecture.dbaccess.DBAccess;
-import com.git.bc.model.Corsista;
+
 import com.git.bc.model.Docente;
 
 class DocenteDAOTest {

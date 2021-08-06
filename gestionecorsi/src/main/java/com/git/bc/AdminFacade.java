@@ -51,6 +51,13 @@ public class AdminFacade {
 			return corsoBC.getAll();
 		}
 		
+		public Corso[] getAllFreeCorso() throws DAOException {
+			return corsoBC.getAllFree();
+		}
+		
+		public Corsista[] getCorsistiByIdCorso(long id) throws DAOException {
+			return corsoBC.getCorsistiByIdCorso(id);
+		}
 		public void delete(Corso corso) throws DAOException {
 			corsoBC.delete(corso);
 		}

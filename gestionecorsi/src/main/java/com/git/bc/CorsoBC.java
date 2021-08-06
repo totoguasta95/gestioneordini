@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import com.git.architecture.dao.CorsoDAO;
 import com.git.architecture.dao.DAOException;
 import com.git.architecture.dbaccess.DBAccess;
+import com.git.bc.model.Corsista;
 import com.git.bc.model.Corso;
 
 public class CorsoBC {
@@ -38,6 +39,22 @@ public class CorsoBC {
 	public Corso[] getAll() throws DAOException {
 		try {
 			return CorsoDAO.getFactory().getAll(conn);
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+	}
+	
+	public Corso[] getAllFree() throws DAOException {
+		try {
+			return CorsoDAO.getFactory().getAllFree(conn);
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+	}
+	
+	public Corsista[] getCorsistiByIdCorso(long id) throws DAOException {
+		try {
+			return CorsoDAO.getFactory().getCorsisti(conn, id);
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
 		}

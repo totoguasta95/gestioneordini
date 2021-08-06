@@ -83,7 +83,7 @@ div.col-md-7 {
 							class="glyphicon glyphicon-book"></i></span> <select
 							class="form-control" id="nomeCorso" name="nomeCorso">
 							<%
-							Corso[] corsi = AdminFacade.getInstance().getAllCorso();
+							Corso[] corsi = AdminFacade.getInstance().getAllFreeCorso();
 							for (int i = 0; i < corsi.length; i++) {
 							%>
 							<option value="<%=corsi[i].getIdCorso()%>"><%=corsi[i].getNomeCorso()%></option>

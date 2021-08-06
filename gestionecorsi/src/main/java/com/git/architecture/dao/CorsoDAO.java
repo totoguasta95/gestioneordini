@@ -9,6 +9,7 @@ import java.sql.Statement;
 import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.RowSetProvider;
 
+import com.git.bc.model.Corsista;
 import com.git.bc.model.Corso;
 
 public class CorsoDAO extends DAOAdapter<Corso> implements DAOConstants{
@@ -92,4 +93,55 @@ public class CorsoDAO extends DAOAdapter<Corso> implements DAOConstants{
 		return corsi;
 	}
 	
+	public Corso[] getAllFree(Connection conn) throws DAOException {
+		Corso[] corsi = null;
+		try {
+			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = stmt.executeQuery(SELECT_CORSI_POSTI_DISP2);
+			rs.last();
+			corsi = new Corso[rs.getRow()];
+			rs.beforeFirst();
+			for (int i = 0; rs.next(); i++) {
+				Corso c = new Corso();
+				c.setIdCorso(rs.getLong(1));
+				c.setNomeCorso(rs.getString(2));
+				c.setDataInizioCorso(new java.util.Date(rs.getDate(3).getTime()));
+				c.setDataFineCorso(new java.util.Date(rs.getDate(4).getTime()));
+				c.setCostoCorso(rs.getDouble(5));
+				c.setCommentiCorso(rs.getString(6));
+				c.setAulaCorso(rs.getString(7));
+				c.setIdDocente(rs.getLong(8));
+				corsi[i] = c;
+			}
+			rs.close();
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+		return corsi;
+	}
+	
+	public Corsista[] getCorsisti(Connection conn, long id) throws DAOException {
+		Corsista[] corsisti = null;
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(SELECT_CORSISTI_BY_CORSO,ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			ps.setLong(1, id);
+			ResultSet rs = ps.executeQuery();
+			rs.last();
+			corsisti = new Corsista[rs.getRow()];
+			rs.beforeFirst();
+			for (int i = 0; rs.next(); i++) {
+				Corsista c = new Corsista();
+				c.setIdCorsista(rs.getLong(1));
+				c.setNomeCorsista(rs.getString(2));
+				c.setCognomeCorsista(rs.getString(3));
+				c.setPrecedentiFormativi((rs.getInt(4) == 1 ? true : false));
+				corsisti[i] = c;
+			}
+			rs.close();
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+		return corsisti;
+	}
 }
