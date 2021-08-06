@@ -18,8 +18,8 @@ div.col-md-7 {
 <body>
 	<jsp:include page="nav.jsp" />
 	<div class="container">
-		<div class="page-header">
-			<h3>Inserire i dati per la registrazione del nuovo corsista</h3>
+		<div class="page-header" style="text-align: center;">
+			<h3>Inserire i dati per registrare il corsista</h3>
 		</div>
 
 		<form action="/<%=application.getServletContextName()%>/salvacorsista"
@@ -27,7 +27,7 @@ div.col-md-7 {
 
 			<!-- Nome --------------------------------------------------------->
 			<div class="form-group">
-				<label class="col-md-1 control-label">Nome</label>
+				<label class="col-md-4 col-md-offset-2 control-label">Nome</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
@@ -35,12 +35,11 @@ div.col-md-7 {
 							name="nome" id="nome" placeholder="Nome" class="form-control">
 					</div>
 				</div>
-				<div class="col-md-7 control-label" id="infoNome"></div>
 			</div>
 
 			<!-- Cognome ------------------------------------------------------>
 			<div class="form-group">
-				<label class="col-md-1 control-label">Cognome</label>
+				<label class="col-md-4 col-md-offset-2 control-label">Cognome</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
@@ -49,12 +48,11 @@ div.col-md-7 {
 							class="form-control">
 					</div>
 				</div>
-				<div class="col-md-7 control-label" id="infoCognome"></div>
 			</div>
 
 			<!-- Precedenti formativi ----------------------------------------------------->
 			<div class="form-group">
-				<label class="col-md-1 control-label">Precedenti formativi</label>
+				<label class="col-md-4 col-md-offset-2 control-label">Precedenti formativi</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="gridRadios"
@@ -63,12 +61,9 @@ div.col-md-7 {
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="gridRadios"
-							id="bool" value="no" checked> <label class="form-check-label"
-							for="gridRadios1">No</label>
+							id="bool" value="no" checked> <label
+							class="form-check-label" for="gridRadios1">No</label>
 					</div>
-
-
-					<div class="col-md-7 control-label" id="precedentiFormativi"></div>
 				</div>
 			</div>
 
@@ -76,7 +71,7 @@ div.col-md-7 {
 
 
 			<div class="form-group">
-				<label class="col-md-1 control-label">Nome corso</label>
+				<label class="col-md-4 col-md-offset-2 control-label">Nome corso</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
@@ -93,12 +88,11 @@ div.col-md-7 {
 						</select>
 					</div>
 				</div>
-				<div class="col-md-7 control-label" id="infoNomeCorso"></div>
 			</div>
 
 			<!-- Submit ------------------------------------------------------->
 			<div class="row">
-				<div class="col-md-4 col-md-offset-1">
+				<div class="col-md-4 col-md-offset-6">
 					<button type="submit" class="btn btn-primary">
 						Inserisci&nbsp;<span class="glyphicon glyphicon-send"></span>
 					</button>
