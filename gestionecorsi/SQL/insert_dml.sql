@@ -27,3 +27,31 @@ insert into corso_corsista values(3,4);
 insert into corso_corsista values(3,3);
 insert into corso_corsista values(3,6);
 
+-- gestionale corso completo
+insert into corso values(5, 'SQL', '12-SET-2021', '24-Nov-2021', 2000, 'Interessante, poco strutturato', 'Aula A5', 2);
+
+insert into corsista values(corsista_seq.nextval, 'Marco', 'Neri', 1);
+insert into corsista values(corsista_seq.nextval, 'Anna', 'Neri', 0);
+insert into corsista values(corsista_seq.nextval, 'Marco', 'Neri', 1);
+insert into corsista values(corsista_seq.nextval, 'Anna', 'Neri', 0);
+insert into corsista values(corsista_seq.nextval, 'Marco', 'Neri', 1);
+insert into corsista values(corsista_seq.nextval, 'Anna', 'Neri', 0);
+insert into corsista values(corsista_seq.nextval, 'Marco', 'Neri', 1);
+insert into corsista values(corsista_seq.nextval, 'Anna', 'Neri', 0);
+insert into corsista values(corsista_seq.nextval, 'Marco', 'Neri', 1);
+insert into corsista values(corsista_seq.nextval, 'Anna', 'Neri', 0);
+insert into corsista values(corsista_seq.nextval, 'Marco', 'Neri', 1);
+insert into corsista values(corsista_seq.nextval, 'Anna', 'Neri', 0);
+
+insert into corso_corsista values(5,7);
+insert into corso_corsista values(5,8);
+insert into corso_corsista values(5,9);
+insert into corso_corsista values(5,10);
+insert into corso_corsista values(5,11);
+insert into corso_corsista values(5,12);
+insert into corso_corsista values(5,13);
+insert into corso_corsista values(5,14);
+insert into corso_corsista values(5,15);
+insert into corso_corsista values(5,16);
+insert into corso_corsista values(5,17);
+insert into corso_corsista values(5,18);
