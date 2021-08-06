@@ -8,9 +8,11 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import com.git.architecture.dao.CorsistaDAO;
 import com.git.architecture.dao.DAOException;
 import com.git.architecture.dao.DocenteDAO;
 import com.git.architecture.dbaccess.DBAccess;
+import com.git.bc.model.Corsista;
 import com.git.bc.model.Docente;
 
 class DocenteDAOTest {
@@ -31,6 +33,19 @@ class DocenteDAOTest {
 				System.out.println(docenti[i].toString());
 			}
 		} catch (DAOException exc){
+			exc.printStackTrace();
+			fail(exc.getMessage());
+		}
+	}
+	
+	@Test
+	void testGetById() throws DAOException{
+		try {
+			Docente d1 = new Docente();
+			d1 =DocenteDAO.getFactory().getById(conn, 1);
+			assertNotNull(d1);
+			System.out.println(d1.toString());
+		} catch (DAOException exc) {
 			exc.printStackTrace();
 			fail(exc.getMessage());
 		}

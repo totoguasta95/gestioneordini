@@ -10,6 +10,8 @@ public interface DAOConstants {
 	
 	/* SELECT BY ID*/
 	String SELECT_CORSISTA_BYID = "select * from corsista where id_corsista = ?";
+	String SELECT_DOCENTE_BYID = "select * from docente where id_docente = ?";
+
 	
 	/* SEQUENZE */
 	String SELECT_CORSISTASEQ = "select corsista_seq.nextval from dual";

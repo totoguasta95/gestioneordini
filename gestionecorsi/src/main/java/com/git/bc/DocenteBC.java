@@ -17,4 +17,12 @@ public class DocenteBC {
 			throw new DAOException(sql);
 		}
 	}
+	
+	public Docente getById(long id) throws DAOException {
+		try {
+			return DocenteDAO.getFactory().getById(conn, id);
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+	}
 }
