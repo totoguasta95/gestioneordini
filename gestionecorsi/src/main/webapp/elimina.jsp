@@ -11,7 +11,7 @@ if (admin != null) {
 %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" errorPage="error.jsp"%>
 
 <!DOCTYPE html>
 <html>
@@ -31,12 +31,12 @@ if (admin != null) {
 			<table class="table table-striped" style="margin-top: 50px">
 				<thead>
 					<tr>
-						<th scope="col">nome corso</th>
-						<th scope="col">data inizio</th>
-						<th scope="col">data fine</th>
-						<th scope="col">commenti</th>
-						<th scope="col">aulacorso</th>
-						<th scope="col">docente</th>
+						<th scope="col">Corso</th>
+						<th scope="col">Data inizio</th>
+						<th scope="col">Data fine</th>
+						<th scope="col">Commenti</th>
+						<th scope="col">Aula</th>
+						<th scope="col">Docente</th>
 					</tr>
 				</thead>
 
@@ -64,8 +64,7 @@ if (admin != null) {
 								<input type="hidden" name="id"
 									value="<%=corsi[i].getIdCorso()%>">
 								<button type="submit" class="btn btn-danger btn-md">
-									<span class="glyphicon glyphicon-trash "></span> Elimina
-								</button>
+									<span class="glyphicon glyphicon-trash "></span></button>
 							</form>
 						</td>
 					</tr>

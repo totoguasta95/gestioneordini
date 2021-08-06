@@ -8,7 +8,7 @@ if (admin != null) {
 <%@page import="com.git.bc.model.Docente"%>
 <%@page import="com.git.bc.model.Corso"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" errorPage="error.jsp"%>
 
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@ if (admin != null) {
 			for (int c = 0; c < corsi.length; c++) {
 		%>
 		<div class="page-header">
-			<h3>Partecipanti al Corso: <%= corsi[c].getNomeCorso() %></h3>
+			<h3>Partecipanti al corso: <%= corsi[c].getNomeCorso() %></h3>
 		</div>
 	
 		<div class="table-responsive">

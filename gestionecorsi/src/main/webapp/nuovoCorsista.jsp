@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" errorPage="error.jsp"%>
 <%@page import="com.git.bc.model.Corso"%>
 <%@ page import="com.git.bc.AdminFacade"%>
 
@@ -19,7 +19,7 @@ div.col-md-7 {
 	<jsp:include page="nav.jsp" />
 	<div class="container">
 		<div class="page-header" style="text-align: center;">
-			<h3>Inserire i dati per registrare il corsista</h3>
+			<h3>Registra nuova corsista</h3>
 		</div>
 
 		<form action="/<%=application.getServletContextName()%>/salvacorsista"
@@ -27,7 +27,7 @@ div.col-md-7 {
 
 			<!-- Nome --------------------------------------------------------->
 			<div class="form-group">
-				<label class="col-md-4 col-md-offset-2 control-label">Nome</label>
+				<label class="col-md-3 col-md-offset-3 control-label" style="text-align: left;">Nome</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
@@ -39,7 +39,7 @@ div.col-md-7 {
 
 			<!-- Cognome ------------------------------------------------------>
 			<div class="form-group">
-				<label class="col-md-4 col-md-offset-2 control-label">Cognome</label>
+				<label class="col-md-3 col-md-offset-3 control-label" style="text-align: left;">Cognome</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
@@ -52,7 +52,7 @@ div.col-md-7 {
 
 			<!-- Precedenti formativi ----------------------------------------------------->
 			<div class="form-group">
-				<label class="col-md-4 col-md-offset-2 control-label">Precedenti formativi</label>
+				<label class="col-md-3 col-md-offset-3 control-label" style="text-align: left;">Precedenti formativi</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="gridRadios"
@@ -71,7 +71,7 @@ div.col-md-7 {
 
 
 			<div class="form-group">
-				<label class="col-md-4 col-md-offset-2 control-label">Nome corso</label>
+				<label class="col-md-3 col-md-offset-3 control-label" style="text-align: left;">Nome corso</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i

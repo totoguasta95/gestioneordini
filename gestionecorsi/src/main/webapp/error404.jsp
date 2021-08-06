@@ -7,14 +7,12 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Error 404</title>
 </head>
 <body>
 <jsp:include page="nav.jsp"/>
 	<div class="container">
-		<div class="page-header">
-			<h3>Pagina non trovata</h3>
-		</div>
+
 
 		<div class="panel panel-danger">
 			<div class="panel-heading">

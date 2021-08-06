@@ -14,7 +14,7 @@
 <%@page import="com.git.bc.model.Corsista"%>
 <%@page import="com.git.bc.Statistiche"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" errorPage="error.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +37,7 @@
 			  </thead>
 			  <tbody>
 			    <tr>
-			      <td>Numero corsisti totali.</td>
+			      <td>Numero corsisti totali</td>
 			      <td><%= stat.getTotCorsisti() %></td>
 			    </tr>
 			    <tr>

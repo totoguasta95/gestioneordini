@@ -17,7 +17,7 @@
 <%@page import="com.git.bc.model.Corsista"%>
 <%@page import="com.git.bc.AdminFacade"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" errorPage="error.jsp"%>
 
 <!DOCTYPE html>
 <html>
@@ -29,8 +29,8 @@
 	<jsp:include page="nav.jsp" />
 	<div class="container">
 		<div class="page-header">
-			<h3>Corsi frequentati dal corsista <%= corsista.getNomeCorsista() +
-			" " + corsista.getCognomeCorsista() %>: </h3>
+			<h3>Corsi frequentati da <%= corsista.getNomeCorsista() +
+			" " + corsista.getCognomeCorsista() %></h3>
 		</div>
 		<div class="table-responsive">
 			<table class="table table-hover" style="width: 100%;">
