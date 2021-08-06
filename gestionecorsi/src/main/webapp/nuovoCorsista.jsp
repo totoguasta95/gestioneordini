@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8"%>
+<%@page import="com.git.bc.model.Corso"%>
+<%@ page import="com.git.bc.AdminFacade"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,7 +63,7 @@ div.col-md-7 {
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="gridRadios"
-							id="bool" value="no"> <label class="form-check-label"
+							id="bool" value="no" checked> <label class="form-check-label"
 							for="gridRadios1">No</label>
 					</div>
 
@@ -70,14 +73,24 @@ div.col-md-7 {
 			</div>
 
 			<!-- Nome Corso ---------------------------------------------------->
+
+
 			<div class="form-group">
 				<label class="col-md-1 control-label">Nome corso</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"> <i
-							class="glyphicon glyphicon-book"></i></span> <input name="nomeCorso"
-							id="nomeCorso" placeholder="Nome corso" class="form-control"
-							style="resize: none" />
+							class="glyphicon glyphicon-book"></i></span> <select
+							class="form-control" id="nomeCorso" name="nomeCorso">
+							<%
+							Corso[] corsi = AdminFacade.getInstance().getAllCorso();
+							for (int i = 0; i < corsi.length; i++) {
+							%>
+							<option value="<%=corsi[i].getIdCorso()%>"><%=corsi[i].getNomeCorso()%></option>
+							<%
+							}
+							%>
+						</select>
 					</div>
 				</div>
 				<div class="col-md-7 control-label" id="infoNomeCorso"></div>

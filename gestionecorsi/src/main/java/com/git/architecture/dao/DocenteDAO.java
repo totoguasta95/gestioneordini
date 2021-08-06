@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.git.bc.model.Corsista;
 import com.git.bc.model.Docente;
 
 public class DocenteDAO extends DAOAdapter<Docente> implements DAOConstants {

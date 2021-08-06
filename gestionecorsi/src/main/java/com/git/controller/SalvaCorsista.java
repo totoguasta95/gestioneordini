@@ -13,6 +13,7 @@ import com.git.bc.AdminFacade;
 import com.git.bc.model.Corsista;
 import com.git.bc.model.Corso;
 import com.git.bc.model.CorsoCorsista;
+import com.git.bc.utilities.Validator;
 
 @WebServlet("/salvacorsista")
 public class SalvaCorsista extends HttpServlet {
@@ -25,6 +26,7 @@ public class SalvaCorsista extends HttpServlet {
 		long id = 0;
 		Corso corso	= new Corso();
 		CorsoCorsista cc = new CorsoCorsista();
+		Validator v = new Validator();
 		
 		try {
 			AdminFacade af = AdminFacade.getInstance();
@@ -32,8 +34,7 @@ public class SalvaCorsista extends HttpServlet {
 			corsista.setNomeCorsista(request.getParameter("nome"));
 			corsista.setCognomeCorsista(request.getParameter("cognome"));
 			corsista.setPrecedentiFormativi(
-					request.getParameter("gridRadios").equals("si")?true:false);
-			
+					v.convalidaPrecedentiFormativi(request.getParameter("gridRadios")));
 			id = af.create(corsista);
 			if(id > 0) {
 				corso.setIdCorso(Long.parseLong(request.getParameter("nomeCorso")));

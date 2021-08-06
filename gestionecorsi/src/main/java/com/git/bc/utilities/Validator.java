@@ -20,4 +20,10 @@ public class Validator {
 			return true;
 	}
 	
+	public boolean convalidaPrecedentiFormativi(String value) {
+		if(value == null || value.equals("")) {
+			return false;
+		}
+		else return value.equals("si")?true:false;
+	}
 }

@@ -64,4 +64,8 @@ public class AdminFacade {
 		public Docente[] getAllDocente() throws DAOException {
 			return docenteBC.getAll();
 		}
+		
+		public Docente getByIdDocente(long id) throws DAOException {
+			return docenteBC.getById(id);
+		}
 }
