@@ -58,4 +58,7 @@ public interface DAOConstants {
 	String SELECT_CORSISTI_BY_CORSO = "select * from corsista "
 			+ "where id_corsista in (select id_corsista from corso_corsista "
 			+ "where id_corso = ?)";
+	
+	
+	
 }
