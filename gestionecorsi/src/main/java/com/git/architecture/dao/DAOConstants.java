@@ -50,8 +50,12 @@ public interface DAOConstants {
 			+ " having count(*) < 12"
 			+ " order by c.id_corso";
 	String SELECT_CORSI_POSTI_DISP2 = "select * from corso"
-			+ " where id_corso = ?"
-			+ " and id_corso in(select id_corso from corso_corsista"
+			+ " where id_corso in(select id_corso from corso_corsista"
 			+ " group by id_corso"
-			+ " having count(*) < 12)"; 
+			+ " having count(*) < 12) "
+			+ "or id_corso not in(select id_corso from corso_corsista)";
+	
+	String SELECT_CORSISTI_BY_CORSO = "select * from corsista "
+			+ "where id_corsista in (select id_corsista from corso_corsista "
+			+ "where id_corso = ?)";
 }
