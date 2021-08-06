@@ -19,9 +19,14 @@ if (admin != null) {
 <body>
 	<jsp:include page="nav.jsp" />
 	<div class="container">
+		<% 
+			Corso[] corsi = AdminFacade.getInstance().getAllCorso();
+			for (int c = 0; c < corsi.length; c++) {
+		%>
 		<div class="page-header">
-			<h3>Partecipanti</h3>
+			<h3>Partecipanti al Corso: <%= corsi[c].getNomeCorso() %></h3>
 		</div>
+	
 		<div class="table-responsive">
 			<table class="table table-hover" style="width: 100%;">
 				<thead class="thead-light">
@@ -33,7 +38,7 @@ if (admin != null) {
 				</thead>
 				<tbody>
 					<%
-					Corsista[] corsisti = AdminFacade.getInstance().getAllCorsista();
+					Corsista[] corsisti = AdminFacade.getInstance().getCorsistiByIdCorso(corsi[c].getIdCorso());
 					for (int i = 0; i < corsisti.length; i++) {
 					%>
 					<tr>
@@ -47,6 +52,9 @@ if (admin != null) {
 				%>
 			</table>
 		</div>
+		<%
+			}
+		%>
 		<br>
 
 
