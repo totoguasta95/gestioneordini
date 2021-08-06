@@ -1,3 +1,7 @@
+<%
+String admin = (String) session.getAttribute("admin");
+if (admin != null) {
+%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8" errorPage="error.jsp"%>
 <%@page import="com.git.bc.model.Corso"%>
@@ -106,3 +110,7 @@ div.col-md-7 {
 
 </body>
 </html>
+<%
+} else
+response.sendRedirect("login.jsp");
+%>

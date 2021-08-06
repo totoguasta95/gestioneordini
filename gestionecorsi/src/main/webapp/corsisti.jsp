@@ -1,9 +1,9 @@
-<%@page import="com.git.bc.AdminFacade"%>
-<%@page import="java.util.Enumeration"%>
 <%
 String admin = (String) session.getAttribute("admin");
 if (admin != null) {
 %>
+<%@page import="com.git.bc.AdminFacade"%>
+<%@page import="java.util.Enumeration"%>
 <%@page import="com.git.bc.model.Corsista"%>
 <%@page import="com.git.bc.model.Docente"%>
 <%@page import="com.git.bc.model.Corso"%>
