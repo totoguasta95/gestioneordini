@@ -1,6 +1,7 @@
 package com.git.architecture.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -39,6 +40,27 @@ public class DocenteDAO extends DAOAdapter<Docente> implements DAOConstants {
 			throw new DAOException(sql);
 		}
 		return docenti;
+	}
+	
+	@Override
+	public Docente getById(Connection conn, long id) throws DAOException {
+		Docente d = null;
+		PreparedStatement ps;
+		try {
+			ps = conn.prepareStatement(SELECT_DOCENTE_BYID);
+			ps.setLong(1, id);
+			ResultSet rs = ps.executeQuery();
+			if (rs.next()) {
+				d = new Docente();
+				d.setIdDocente(rs.getLong(1));
+				d.setNomeDocente(rs.getString(2));
+				d.setCognomeDocente(rs.getString(3));
+				d.setCvDocente(rs.getString(4));
+			}
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+		return d;
 	}
 
 }
