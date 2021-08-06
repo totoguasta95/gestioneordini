@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-radius: 0px">
+<nav class="navbar navbar-expand-lg navbar-default" style="border-radius: 0px">
 	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
