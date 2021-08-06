@@ -53,5 +53,5 @@ public interface DAOConstants {
 			+ " where id_corso = ?"
 			+ " and id_corso in(select id_corso from corso_corsista"
 			+ " group by id_corso"
-			+ " having count(*) < 12)";
+			+ " having count(*) < 12)"; 
 }
