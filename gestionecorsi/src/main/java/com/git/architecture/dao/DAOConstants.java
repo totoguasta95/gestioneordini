@@ -47,9 +47,9 @@ public interface DAOConstants {
 			+ " group by c.id_corso, c.nome_corso"
 			+ " having count(*) < 12"
 			+ " order by c.id_corso";
-//	String SELECT_CORSI_POSTI_DISP2 = "select * from corso"
-//			+ " where id_corso = ?"
-//			+ " and id_corso in(select id_corso from corso_corsista"
-//			+ " group by id_corso"
-//			+ " having count(*) < 12)";
+	String SELECT_CORSI_POSTI_DISP2 = "select * from corso"
+			+ " where id_corso = ?"
+			+ " and id_corso in(select id_corso from corso_corsista"
+			+ " group by id_corso"
+			+ " having count(*) < 12)";
 }
