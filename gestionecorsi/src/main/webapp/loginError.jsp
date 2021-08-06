@@ -1,4 +1,3 @@
-<% session.invalidate(); %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,10 +23,6 @@
 					l'amministratore:</p>
 				<p>
 					<a href="mailto:admin@site.com">admin@site.com</a>
-				</p>
-				<p>Per tornare alla pagina di login</p>
-				<p>
-					<a href="login.jsp" class="btn btn-default">Login</a>
 				</p>
 			</div>
 		</div>

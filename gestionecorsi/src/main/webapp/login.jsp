@@ -1,4 +1,11 @@
 <%
+	boolean bloccato = (getServletContext().getAttribute("bloccato") != null) ?
+			(boolean) getServletContext().getAttribute("bloccato") : false;
+
+	if(bloccato == true) {
+		response.sendRedirect("loginError.jsp");
+	}
+
 	String admin = (String) session.getAttribute("admin");
 	if(admin == null) {
 %>
@@ -49,8 +56,8 @@
 					</div>
 				</div>
 				
-				<% if(session.getAttribute("countErr") != null) {
-					 int countErr= (int)session.getAttribute("countErr");
+				<% if(getServletContext().getAttribute("countErr") != null) {
+					 int countErr= (int)getServletContext().getAttribute("countErr");
 					 String msg = (countErr == 1) ? 
 					 	"ATTENZIONE! Ultimo tentativo!"
 						: "Tentativo di accesso fallito! Numero tentativi rimanenti: " + countErr;

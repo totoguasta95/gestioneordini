@@ -58,6 +58,11 @@ public class AdminFacade {
 		public Corsista[] getCorsistiByIdCorso(long id) throws DAOException {
 			return corsoBC.getCorsistiByIdCorso(id);
 		}
+		
+		public Corso[] getCorsiByIdCorsista(long id) throws DAOException {
+			return corsoBC.getCorsiByIdCorsista(id);
+		}
+		
 		public void delete(Corso corso) throws DAOException {
 			corsoBC.delete(corso);
 		}

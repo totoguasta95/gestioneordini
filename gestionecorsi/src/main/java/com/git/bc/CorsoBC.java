@@ -59,4 +59,12 @@ public class CorsoBC {
 			throw new DAOException(sql);
 		}
 	}
+	
+	public Corso[] getCorsiByIdCorsista(long id) throws DAOException {
+		try {
+			return CorsoDAO.getFactory().getCorsiByIdCorsista(conn, id);
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+	}
 }

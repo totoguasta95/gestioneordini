@@ -2,6 +2,7 @@ package com.git.controller;
 
 import java.io.IOException;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,9 +25,11 @@ public class ControlloLogin extends HttpServlet {
 		String adminpass;
 		int count = 5;
 		 
+		
 		HttpSession session = request.getSession();
-		if(session.getAttribute("countErr") != null)
-			count = (int)session.getAttribute("countErr");
+		ServletContext servletContext = getServletContext();
+		if(servletContext.getAttribute("countErr") != null)
+			count = (int)servletContext.getAttribute("countErr");
 		
 		count--;
 		
@@ -37,23 +40,24 @@ public class ControlloLogin extends HttpServlet {
 				
 				if(adminpass != null) {
 					if(adminpass.equals(password)) {
+						servletContext.removeAttribute("countErr");
 						session.setAttribute("admin", username);
 						response.sendRedirect("corsisti.jsp");
 					} else {
 						if(count > 0) {
-							session.setAttribute("countErr", count);
+							servletContext.setAttribute("countErr", count);
 							response.sendRedirect("login.jsp");
 						} else {
-							session.setAttribute("countErr", 0);
+							servletContext.setAttribute("bloccato", true);
 							response.sendRedirect("loginError.jsp");
 						}
 					}
 				} else {
 					if(count > 0) {
-						session.setAttribute("countErr", count);
+						servletContext.setAttribute("countErr", count);
 						response.sendRedirect("login.jsp");
 					} else {
-						session.setAttribute("countErr", 0);
+						servletContext.setAttribute("bloccato", true);
 						response.sendRedirect("loginError.jsp");
 					}
 				}
