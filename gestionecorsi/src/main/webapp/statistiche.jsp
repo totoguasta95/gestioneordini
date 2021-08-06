@@ -153,7 +153,7 @@
 			      									Nome corso: <%= corso.getNomeCorso() %>
 			      								</div>
 			      								<div class="col-md-5">
-			      									Posti disponibili: <%= map.get(corso) %>
+			      									Posti disponibili: <%= 12-map.get(corso) %>
 			      								</div>
 			      							</div>
 							      		</li>
