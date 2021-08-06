@@ -55,3 +55,6 @@ insert into corso_corsista values(5,15);
 insert into corso_corsista values(5,16);
 insert into corso_corsista values(5,17);
 insert into corso_corsista values(5,18);
+
+
+
