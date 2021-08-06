@@ -40,18 +40,6 @@ if (admin != null) {
 						<td><%=corsisti[i].getNomeCorsista()%></td>
 						<td><%=corsisti[i].getCognomeCorsista()%></td>
 						<td><%=corsisti[i].isPrecedentiFormativi()%></td>
-						<td>
-							<form
-								action="/<%=application.getServletContextName()%>/aggiungicarrello"
-								method="post">
-								<input type="hidden" name="nome"
-									value="<%=corsisti[i].getNomeCorsista()%>"> <input
-									type="hidden" name="cognome"
-									value="<%=corsisti[i].getCognomeCorsista()%>"> <input
-									type="hidden" name="precedentiFormativi"
-									value="<%=corsisti[i].isPrecedentiFormativi()%>">
-							</form>
-						</td>
 					</tr>
 				</tbody>
 				<%
