@@ -12,9 +12,14 @@ body {
 }
 .navbar-light{
 	background-color: #E1E3F7;
-	color: black;
+	color: white;
 } 
-
+nav ul li {
+	color: black;
+}
+.nav navbar-nav navbar-right {
+	color: black;
+}
 
 footer {
 	position: absolute;
